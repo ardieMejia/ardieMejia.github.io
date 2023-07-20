@@ -1,0 +1,25 @@
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: showeverything
+#+STARTUP: indent
+#+STARTUP: nohideblocks
+#+OPTIONS: ^:{}
+#+OPTIONS: LaTeX:t
+#+OPTIONS: LaTeX:dvipng
+#+OPTIONS: LaTeX:nil
+#+OPTIONS: LaTeX:verbatim
+        
+#+OPTIONS: H:3
+#+OPTIONS: toc:t
+#+OPTIONS: num:t
+#+LANGUAGE: zh-CN
+        
+#+KEYWORDS: 关于
+#+TITLE: 关于此博客
+#+AUTHOR: OrgNote
+#+EMAIL: pythonisland@gmail.com
+#+DATE: 2023/07/20
+
+此博客 =OrgNote= 基于[[https://github.com/LeslieZhu/OrgNote][OrgNote]]生成。
+
