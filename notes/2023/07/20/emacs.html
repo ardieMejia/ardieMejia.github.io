@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-07-20 Thu 22:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Ardie" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0d69ab1">1. Navigation, behaviours</a>
+<ul>
+<li><a href="#orgd31cf59">1.1. basic visiting/opening file</a>
+<ul>
+<li><a href="#org34bda06">1.1.1. Some of these I myself dont even use. I always use C-x C-f for everything. Thats already enough for me.</a></li>
+</ul>
+</li>
+<li><a href="#org75b400b">1.2. vertical vs horizontal split of windows in Emacs</a>
+<ul>
+<li><a href="#org588fb34">1.2.1. Context:</a></li>
+<li><a href="#orgf99ce3f">1.2.2. No context:</a></li>
+</ul>
+</li>
+<li><a href="#orgd3f0d9d">1.3. <b>disabled</b> Quickly open a buffer of the same file, to narrow (narrow using C-x n n widen using C-x n w), while not affecting original window</a>
+<ul>
+<li><a href="#org2cdc519">1.3.1. https://stackoverflow.com/questions/9709121/is-there-a-way-to-narrow-to-region-in-one-window-while-not-narrowing-in-another</a></li>
+<li><a href="#org65e7205">1.3.2. C-x 4 c to open temporarily a buffer, maybe to indent or something</a></li>
+<li><a href="#org4346175">1.3.3. this behaviour probably not encouraged, probably becoz there are other better alternatives, and confusing for beginners</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge8fe575">2. Loading subtlety, hooks, eval, yadayada</a>
+<ul>
+<li><a href="#org293fc61">2.1. How to "hook" a minor mode to a major mode. The # (hash) is NOT necessary</a>
+<ul>
+<li><a href="#org9517237">2.1.1. (add-hook 'sh-mode-hook 'electric-pair-local-mode)</a></li>
+</ul>
+</li>
+<li><a href="#orgfa09dbb">2.2. Alternative, using lambda, nothing special</a>
+<ul>
+<li><a href="#org02af992">2.2.1. https://stackoverflow.com/questions/8892813/emacs-shell-script-mode-hook</a></li>
+</ul>
+</li>
+<li><a href="#orgfe0388c">2.3. https://stackoverflow.com/questions/2736087/eval-after-load-vs-mode-hook</a>
+<ul>
+<li><a href="#org77c5f92">2.3.1. eval-after-load is NOT buffer-aware, runs only once.</a></li>
+<li><a href="#org378df94">2.3.2. mode-hook is buffer-aware, runs for every buffer</a></li>
+<li><a href="#org8a96e1f">2.3.3. mode&#x2013;hook run after eval-after-load</a></li>
+</ul>
+</li>
+<li><a href="#org6ba8461">2.4. require, autoload, and all sorts of stuff</a>
+<ul>
+<li><a href="#orgc3430b0">2.4.1. Code practice: autoload</a></li>
+</ul>
+</li>
+<li><a href="#org43a66de">2.5. https://www.reddit.com/r/emacs/comments/643dkt/use_package_vs_require_and_maybe_some_sorrowful/</a>
+<ul>
+<li><a href="#orgb61a0e7">2.5.1. Lots of useful comments on use-package vs require. Most importantly, you learn that require is standard GNU Emacs since 1985. WOW! Library authors dont assume everyone has use-package, hence, many dont include it in installation instructions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgac73ad2">3. Emacs Daemon. Might not be important for beginners, but VERY useful, and you'll love it once you get it to work. But I cant make it work under Windows for some reason</a>
+<ul>
+<li><a href="#org2a198c7">3.1. https://stuff-things.net/2014/12/16/working-with-emacsclient/</a></li>
+<li><a href="#org5741629">3.2. https://wikemacs.org/wiki/Emacs_server</a></li>
+</ul>
+</li>
+<li><a href="#org06cc5da">4. Keybinding</a>
+<ul>
+<li><a href="#org7bacec3">4.1. Our init.el org-mode-map seems best</a>
+<ul>
+<li><a href="#org41315cf">4.1.1. with-eval-after-load &amp; -mode-map</a></li>
+<li><a href="#orga725ac1">4.1.2. with-eval-after-load &amp; local-set-key</a></li>
+</ul>
+</li>
+<li><a href="#orge344f76">4.2. In the long term, once we understand, we should avoid -eval- &amp; hooks (??)</a>
+<ul>
+<li><a href="#orgecd15ca">4.2.1. https://www.wisdomandwonder.com/emacs/12783/are-load-hooks-always-a-bad-idea</a></li>
+</ul>
+</li>
+<li><a href="#orgd269c92">4.3. Lots of information</a>
+<ul>
+<li><a href="#org77137a3">4.3.1. https://www.masteringemacs.org/article/mastering-key-bindings-emacs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb74c1de">5. dired file manager</a>
+<ul>
+<li><a href="#orgde89246">5.1. https://www.youtube.com/watch?v=PMWwM8QJAtU</a>
+<ul>
+<li><a href="#org887dac4">5.1.1. System crafters</a></li>
+<li><a href="#orga6a8a3d">5.1.2. shortcuts</a></li>
+</ul>
+</li>
+<li><a href="#orgce8967a">5.2. https://lucidmanager.org/productivity/using-emacs-image-dired/</a>
+<ul>
+<li><a href="#org3de9df5">5.2.1. TODO!!!!!</a></li>
+<li><a href="#orgf5a25c0">5.2.2. Very cool, imagine opening GIMP automaticallly from inside Emacs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org134cd1f">6. folding, hide &amp; other cool tricks</a>
+<ul>
+<li><a href="#org5bb48d4">6.1. Should start collecting it here!!</a></li>
+</ul>
+</li>
+<li><a href="#org43d0707">7. Looks, looks, looks:</a>
+<ul>
+<li><a href="#org284faab">7.1. If you want some really great looking suggestion on fonts, from usable examples. Look at this</a>
+<ul>
+<li><a href="#orge9aea3e">7.1.1. https://www.reddit.com/r/emacs/comments/14q399t/hi_out_of_curiosity_what_are_your_favourite_fonts/</a></li>
+<li><a href="#org366b8c0">7.1.2. Especially the code snippet below</a></li>
+</ul>
+</li>
+<li><a href="#org5f2b461">7.2. System Crafters ha a very cool Lisp code using the macro/function (?) called dolist</a>
+<ul>
+<li><a href="#org1ffc6e8">7.2.1. https://systemcrafters.net/emacs-tips/presentations-with-org-present/</a></li>
+</ul>
+</li>
+<li><a href="#org91cafd4">7.3. How do you find out font (what Emacs calls faces) information?</a>
+<ul>
+<li><a href="#orga75f34d">7.3.1. https://www.emacswiki.org/emacs/FaceList</a></li>
+<li><a href="#orgff90950">7.3.2. https://www.emacswiki.org/emacs/Face</a></li>
+</ul>
+</li>
+<li><a href="#orgd28aac2">7.4. You might have to read this one day</a>
+<ul>
+<li><a href="#org5231606">7.4.1. https://zzamboni.org/post/beautifying-org-mode-in-emacs/</a></li>
+<li><a href="#orgb5006dc">7.4.2. https://www.gnu.org/software/emacs/manual/html_node/emacs/Face-Customization.html</a></li>
+<li><a href="#orga6d0fe4">7.4.3. https://www.gnu.org/software/emacs/manual/html_node/emacs/Faces.html</a></li>
+<li><a href="#org514f546">7.4.4. https://github.com/abo-abo/swiper/issues/568</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgba72064">8. YASsnippets:</a>
+<ul>
+<li><a href="#org6843923">8.1. Great beginner example, Im finally learning from this example:</a>
+<ul>
+<li><a href="#org248299d">8.1.1. https://joaotavora.github.io/yasnippet/snippet-development.html</a></li>
+</ul>
+</li>
+<li><a href="#org20cc566">8.2. Great example too:</a>
+<ul>
+<li><a href="#orge2359bc">8.2.1. https://joaotavora.github.io/yasnippet/snippet-reference.html</a></li>
+</ul>
+</li>
+<li><a href="#orgbd3d412">8.3. I finally know how setup config (dirs etc) properly</a>
+<ul>
+<li><a href="#orgc23e9e1">8.3.1. https://joaotavora.github.io/yasnippet/snippet-organization.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org72ba52f">9. org templates:</a>
+<ul>
+<li><a href="#org419f53a">9.1. Finally once you start inserting your first code block (template, whatever). We can read this</a>
+<ul>
+<li><a href="#org25008be">9.1.1. https://www.nicholasvanhorn.com/posts/org-structure-completion.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgdfc71ef">10. Something I have never used in Emacs, but usually in terminal, replace text/patterns in multiple files:</a>
+<ul>
+<li><a href="#orgfee2921">10.1. https://stackoverflow.com/questions/270930/using-emacs-to-recursively-find-and-replace-in-text-files-not-already-open</a>
+<ul>
+<li><a href="#orgabedda7">10.1.1. Need as input: &#x2013;&gt; filename pattern &amp; regex text</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org45e7e43">11. Very IMPORTANT, saved all my loading problems!!:</a>
+<ul>
+<li><a href="#org1268d83">11.1. https://github.com/jwiegley/use-package/issues/494</a>
+<ul>
+<li><a href="#orgc966ef8">11.1.1. Personally, I just removed "package-refresh-contents" from setup-packages.el</a></li>
+</ul>
+</li>
+<li><a href="#orgb559850">11.2. Additional read too</a>
+<ul>
+<li><a href="#org96d9cd4">11.2.1. https://ianyepan.github.io/posts/setting-up-use-package/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1afc2a8">12. An apparently, very cool init.el, according to one good emacs user. Must read it 1 day</a>
+<ul>
+<li><a href="#orgc7ae5c8">12.1. https://github.com/eastwood/config/blob/master/emacs.d/init.el</a></li>
+</ul>
+</li>
+<li><a href="#org848ff07">13. Very Cool. But important to not over-rely. Auto-saving for Emacs, by exploiting "out-of-focus"</a>
+<ul>
+<li><a href="#orga26e1dd">13.1. https://www.emacswiki.org/emacs/AutoSave</a>
+<ul>
+<li><a href="#org6f7bc16">13.1.1. 'focus-out-hook'</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org29bd363">14. Cool for development, you might want to include this in an init file. Maybe as a separate development-init.el</a>
+<ul>
+<li><a href="#orgf1a44ee">14.1. https://emacs.stackexchange.com/questions/169/how-do-i-reload-a-file-in-a-buffer/171#171</a></li>
+</ul>
+</li>
+<li><a href="#org94ae75c">15. GUIX magically works along with my spacemacs, how?</a>
+<ul>
+<li><a href="#org70b67ca">15.1. Something about locales GUIX<sub>LOCPATH</sub>, will never allow foreign-distro programs to load GUIX stuff,</a>
+<ul>
+<li><a href="#orgfd80eeb">15.1.1. -&gt; while ensuring GUIX only loads everything foreign  and local.</a></li>
+<li><a href="#org89d178c">15.1.2. this "foreign-distro" programs cant see GUIX<sub>LOCPATH</sub></a></li>
+</ul>
+</li>
+<li><a href="#org3bd3dc7">15.2. If thats the case, we can install Tramp by:</a>
+<ul>
+<li><a href="#org5180f5c">15.2.1. unset the GUIX<sub>LOCPATH</sub> variable</a></li>
+<li><a href="#org52d8693">15.2.2. reload original spacemacs safely</a></li>
+<li><a href="#org2dfa0fe">15.2.3. and try to install Tramp and load Google drive from there</a></li>
+</ul>
+</li>
+<li><a href="#orgce483a6">15.3. If that doesnt work then, its safe to</a>
+<ul>
+<li><a href="#orgcb0931f">15.3.1. reset everything back to GUIX spacemacs, and</a></li>
+<li><a href="#org7bf08a0">15.3.2. install TRAMP from there</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2ec9e0e">16. Basics, education:</a>
+<ul>
+<li><a href="#org395fdeb">16.1. Interesting, lead from other examples:</a>
+<ul>
+<li><a href="#org7e8106f">16.1.1. https://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html</a></li>
+</ul>
+</li>
+<li><a href="#org4d45c45">16.2. Lisp</a>
+<ul>
+<li><a href="#org2e29a74">16.2.1. One of the best basic intro into eLisp:</a></li>
+</ul>
+</li>
+<li><a href="#org7cf807d">16.3. elisp - my enlightenment</a>
+<ul>
+<li><a href="#org75895bc">16.3.1. https://emacs.stackexchange.com/questions/80/how-can-i-quickly-toggle-between-a-file-and-a-scratch-buffer-having-the-same-m</a></li>
+</ul>
+</li>
+<li><a href="#orga192719">16.4. Errors:</a>
+<ul>
+<li><a href="#orgd4f1ce5">16.4.1. https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58</a></li>
+</ul>
+</li>
+<li><a href="#org7ff0d55">16.5. Datatypes, converting strings, etc..</a>
+<ul>
+<li><a href="#orgdf4ba5d">16.5.1. https://www.gnu.org/software/emacs/manual/html_node/elisp/String-Conversion.html</a></li>
+<li><a href="#orgf8645cd">16.5.2. https://www.gnu.org/software/emacs/manual/html_node/elisp/Text-Comparison.html</a></li>
+<li><a href="#org0044c2e">16.5.3. maybe a good website</a></li>
+<li><a href="#org910ccc3">16.5.4. So many cool things to try, like nyanmode, cute cat that browses with you.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3226a9a">17. Personal issues:</a>
+<ul>
+<li><a href="#orgfbc2938">17.1. Multi cursors trouble</a>
+<ul>
+<li><a href="#orge706793">17.1.1. Sometimes multiple-cursors dont work in certain modes. I switch to a different mode (Eg: Python) and it works</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org39b3815">18. Wishlist</a>
+<ul>
+<li><a href="#orgfa9ef0a">18.1. https://github.com/oantolin/embark</a>
+<ul>
+<li><a href="#orgb8e97e9">18.1.1. Embark makes it easy to run commands depending on where your point (cursor?) is</a></li>
+<li><a href="#orgf2a7199">18.1.2. Embark is like a keyboard based version of right-click contextual menu (pop-up)</a></li>
+<li><a href="#orgbca74b3">18.1.3. Examples:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgcaae0fd">19. How do we export to PDFs:</a>
+<ul>
+<li><a href="#org64bc188">19.1. The links we below tried reading below, but in the end the previous instructions simply worked</a>
+<ul>
+<li><a href="#org1793a24">19.1.1. https://www.geneatcg.com/emacs-org-mode-export-to-pdf/</a></li>
+<li><a href="#org16f3b5c">19.1.2. https://medium.com/@sachinsamurai/setting-up-latex-on-doom-emacs-for-beginners-824358463a42</a></li>
+<li><a href="#orgc6d1210">19.1.3. https://www.tug.org/texlive/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org224924e">20. Possible projects</a>
+<ul>
+<li><a href="#org6f98850">20.1. I want to have a buffer on the right side that automatically updates, whenever I change some source file (.org file maybe) on the left side</a></li>
+<li><a href="#org76804fb">20.2. Might be useful to familiarize with these functions, has lots of em, and very simple explanation</a>
+<ul>
+<li><a href="#orgdaccc49">20.2.1. http://xahlee.info/emacs/emacs/elisp_buffer_file_functions.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3beea75">21. modifications that are fancy/fun, but not important</a>
+<ul>
+<li><a href="#org83d9b56">21.1. Configuring the modeline</a>
+<ul>
+<li><a href="#orga39655e">21.1.1. Important variables, actually some are confusing. And it was easier for me to just edit Emacs modeline with simple functions, like combining (cond ..) &amp; (major-mode)</a></li>
+<li><a href="#org67beb03">21.1.2. I used emojis from here</a></li>
+<li><a href="#org8b8fa96">21.1.3. I dont know what this is for</a></li>
+<li><a href="#org8f14304">21.1.4. If you were testing modeline in a buffer, the command force-mode-line-update might be useful</a></li>
+<li><a href="#orgab8999b">21.1.5. Config examples:</a></li>
+<li><a href="#orgbd8a6e4">21.1.6. https://emacsdocs.org/docs/elisp/Emulating-Mode-Line</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2790613">22. More cool stuff to re-arrange!!</a>
+<ul>
+<li><a href="#org9d25617">22.1. https://masteringemacs.com/article/diacritics-in-emacs</a></li>
+<li><a href="#orgaa554bf">22.2. Email</a>
+<ul>
+<li><a href="#orgb9d0de0">22.2.1. https://shom.dev/posts/20220108_setting-up-protonmail-in-emacs/</a></li>
+</ul>
+</li>
+<li><a href="#orgb2d9b32">22.3. Hydra, MUST read this and write properly later</a>
+<ul>
+<li><a href="#orgf1ae6e3">22.3.1. https://elpa.gnu.org/packages/hydra.html</a></li>
+<li><a href="#orgb4c6dc7">22.3.2. https://github.com/abo-abo/hydra</a></li>
+<li><a href="#orgd3b9872">22.3.3. https://www.reddit.com/r/emacs/comments/8of6tx/tip_how_to_be_a_beast_with_hydra/</a></li>
+</ul>
+</li>
+<li><a href="#org00d3df9">22.4. http://xahlee.info/emacs/emacs/emacs_auto_save.html</a>
+<ul>
+<li><a href="#org458c5bf">22.4.1. an argument against making save an automatic feature. And an argument for saving whenever you switch out of Emacs (that is switching to other apps, like a browser, or switching workspace). Ive had this on, for a long time. But now reading argument for it, what a relief. For some time, I was thinking whether Emacs not having an auto-save every second (like other IDE's) a benefit or annoyance. Now I guess, my practice has always made sense (Besides, when we are developing/writing, we mostly need saving when we do something else, browswing a word/article, so attaching it to 'focus-out-hook makes complete sense)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgec8e1c7">23. From Redplanet (rearrange later):</a>
+<ul>
+<li><a href="#org25b17b6">23.1. https://lists.gnu.org/archive/html/help-gnu-emacs/2003-04/msg00767.html</a>
+<ul>
+<li><a href="#org3ee6f95">23.1.1. This code adds directories and its sub-directories to load-path. The reason why we dont do this is probably becoz load-path can get excessively long, and Emacs users might want to selectively disable some features.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org302c445">24. Rearrange:</a>
+<ul>
+<li><a href="#org91fa769">24.1. Learning common lisp and eLisp, eLisp doesnt have the stream function, they have insert-file-contents</a></li>
+<li><a href="#orga35cbdc">24.2. The reason why Emacs uses an alist</a>
+<ul>
+<li><a href="#org87182f4">24.2.1. https://emacs.stackexchange.com/questions/3397/how-to-replace-an-element-of-an-alist</a></li>
+</ul>
+</li>
+<li><a href="#org543e0f1">24.3. This one is DEFINITELY relevant to our GIS system</a>
+<ul>
+<li><a href="#orgf2dceba">24.3.1. https://groups.io/g/sw-gis/topic/install_emacs_for_smallworld/75042662?p=</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgfe8b913">25. We may need to read and rearrange in a separate file called EmacsWindows.org:</a>
+<ul>
+<li><a href="#orgf15e5f3">25.1. https://www.emacswiki.org/emacs/CategoryWThirtyTwo</a></li>
+<li><a href="#org59d8cb2">25.2. There are many ports of GNU tools available</a>
+<ul>
+<li><a href="#org4fedefb">25.2.1. https://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Other-useful-ports.html</a></li>
+</ul>
+</li>
+<li><a href="#org466257a">25.3. But we're interested only in one. Cygwin. Apparently, its also the most popular</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0d69ab1" class="outline-2">
+<h2 id="org0d69ab1"><span class="section-number-2">1.</span> Navigation, behaviours</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd31cf59" class="outline-3">
+<h3 id="orgd31cf59"><span class="section-number-3">1.1.</span> <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Visiting.html">basic visiting/opening file</a></h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org34bda06" class="outline-4">
+<h4 id="org34bda06"><span class="section-number-4">1.1.1.</span> Some of these I myself dont even use. I always use C-x C-f for everything. Thats already enough for me.</h4>
+</div>
+</div>
+<div id="outline-container-org75b400b" class="outline-3">
+<h3 id="org75b400b"><span class="section-number-3">1.2.</span> vertical vs horizontal split of windows in Emacs</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org588fb34" class="outline-4">
+<h4 id="org588fb34"><span class="section-number-4">1.2.1.</span> Context:</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgb77dc9e"></a>org-agenda, using a variable =====&gt; (setq split-width-threshold 100) or any value<br />
+<ol class="org-ol">
+<li><a id="orge67a72b"></a><a href="https://emacs.stackexchange.com/questions/2513/how-to-get-org-agenda-to-prefer-split-window-right">The variable split-width-threshold to control vertical or horizontal split</a><br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf99ce3f" class="outline-4">
+<h4 id="orgf99ce3f"><span class="section-number-4">1.2.2.</span> No context:</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org7f9c2c2"></a>C-x 3<br />
+<ol class="org-ol">
+<li><a id="orgb704cbf"></a><a href="https://stackoverflow.com/questions/20167246/emacs-open-buffer-in-vertical-split-by-default">https://stackoverflow.com/questions/20167246/emacs-open-buffer-in-vertical-split-by-default</a><br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd3f0d9d" class="outline-3">
+<h3 id="orgd3f0d9d"><span class="section-number-3">1.3.</span> <b>disabled</b> Quickly open a buffer of the same file, to narrow (narrow using C-x n n widen using C-x n w), while not affecting original window</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org2cdc519" class="outline-4">
+<h4 id="org2cdc519"><span class="section-number-4">1.3.1.</span> <a href="https://stackoverflow.com/questions/9709121/is-there-a-way-to-narrow-to-region-in-one-window-while-not-narrowing-in-another">https://stackoverflow.com/questions/9709121/is-there-a-way-to-narrow-to-region-in-one-window-while-not-narrowing-in-another</a></h4>
+</div>
+<div id="outline-container-org65e7205" class="outline-4">
+<h4 id="org65e7205"><span class="section-number-4">1.3.2.</span> C-x 4 c to open temporarily a buffer, maybe to indent or something</h4>
+</div>
+<div id="outline-container-org4346175" class="outline-4">
+<h4 id="org4346175"><span class="section-number-4">1.3.3.</span> this behaviour probably not encouraged, probably becoz there are other better alternatives, and confusing for beginners</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orge8fe575" class="outline-2">
+<h2 id="orge8fe575"><span class="section-number-2">2.</span> Loading subtlety, hooks, eval, yadayada</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org293fc61" class="outline-3">
+<h3 id="org293fc61"><span class="section-number-3">2.1.</span> How to "hook" a minor mode to a major mode. The # (hash) is NOT necessary</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org9517237" class="outline-4">
+<h4 id="org9517237"><span class="section-number-4">2.1.1.</span> (add-hook 'sh-mode-hook 'electric-pair-local-mode)</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org388521c"></a><a href="https://stackoverflow.com/questions/12763566/how-to-permanently-enable-the-hs-minor-mode-in-emacs">https://stackoverflow.com/questions/12763566/how-to-permanently-enable-the-hs-minor-mode-in-emacs</a><br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfa09dbb" class="outline-3">
+<h3 id="orgfa09dbb"><span class="section-number-3">2.2.</span> Alternative, using lambda, nothing special</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org02af992" class="outline-4">
+<h4 id="org02af992"><span class="section-number-4">2.2.1.</span> <a href="https://stackoverflow.com/questions/8892813/emacs-shell-script-mode-hook">https://stackoverflow.com/questions/8892813/emacs-shell-script-mode-hook</a></h4>
+</div>
+</div>
+<div id="outline-container-orgfe0388c" class="outline-3">
+<h3 id="orgfe0388c"><span class="section-number-3">2.3.</span> <a href="https://stackoverflow.com/questions/2736087/eval-after-load-vs-mode-hook">https://stackoverflow.com/questions/2736087/eval-after-load-vs-mode-hook</a></h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org77c5f92" class="outline-4">
+<h4 id="org77c5f92"><span class="section-number-4">2.3.1.</span> eval-after-load is NOT buffer-aware, runs only once.</h4>
+</div>
+<div id="outline-container-org378df94" class="outline-4">
+<h4 id="org378df94"><span class="section-number-4">2.3.2.</span> mode-hook is buffer-aware, runs for every buffer</h4>
+</div>
+<div id="outline-container-org8a96e1f" class="outline-4">
+<h4 id="org8a96e1f"><span class="section-number-4">2.3.3.</span> mode&#x2013;hook run after eval-after-load</h4>
+</div>
+</div>
+<div id="outline-container-org6ba8461" class="outline-3">
+<h3 id="org6ba8461"><span class="section-number-3">2.4.</span> require, autoload, and all sorts of stuff</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgc3430b0" class="outline-4">
+<h4 id="orgc3430b0"><span class="section-number-4">2.4.1.</span> Code practice: autoload</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #7f0000;">;; </span><span style="color: #7f0000;">Where  second.el has the function say-hello</span>
+<span style="color: #7f0000;">;; </span><span style="color: #7f0000;">and file will only be loaded when function is called</span>
+<span style="color: #7f0000;">;; </span><span style="color: #7f0000;">this makes things faster, must learn more about this</span>
+(autoload 'say-hello <span style="color: #3548cf;">"~/my-trash/elispPractice_autoload/second.el"</span>)
+
+
+(say-hello 6)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org43a66de" class="outline-3">
+<h3 id="org43a66de"><span class="section-number-3">2.5.</span> <a href="https://www.reddit.com/r/emacs/comments/643dkt/use_package_vs_require_and_maybe_some_sorrowful/">https://www.reddit.com/r/emacs/comments/643dkt/use_package_vs_require_and_maybe_some_sorrowful/</a></h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-orgb61a0e7" class="outline-4">
+<h4 id="orgb61a0e7"><span class="section-number-4">2.5.1.</span> Lots of useful comments on use-package vs require. Most importantly, you learn that require is standard GNU Emacs since 1985. WOW! Library authors dont assume everyone has use-package, hence, many dont include it in installation instructions</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgac73ad2" class="outline-2">
+<h2 id="orgac73ad2"><span class="section-number-2">3.</span> Emacs Daemon. Might not be important for beginners, but VERY useful, and you'll love it once you get it to work. But I cant make it work under Windows for some reason</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2a198c7" class="outline-3">
+<h3 id="org2a198c7"><span class="section-number-3">3.1.</span> <a href="https://stuff-things.net/2014/12/16/working-with-emacsclient/">https://stuff-things.net/2014/12/16/working-with-emacsclient/</a></h3>
+</div>
+<div id="outline-container-org5741629" class="outline-3">
+<h3 id="org5741629"><span class="section-number-3">3.2.</span> <a href="https://wikemacs.org/wiki/Emacs_server">https://wikemacs.org/wiki/Emacs_server</a></h3>
+</div>
+</div>
+<div id="outline-container-org06cc5da" class="outline-2">
+<h2 id="org06cc5da"><span class="section-number-2">4.</span> Keybinding</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org7bacec3" class="outline-3">
+<h3 id="org7bacec3"><span class="section-number-3">4.1.</span> Our init.el org-mode-map seems best</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org41315cf" class="outline-4">
+<h4 id="org41315cf"><span class="section-number-4">4.1.1.</span> with-eval-after-load &amp; -mode-map</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org2b96bff"></a><a href="https://www.reddit.com/r/emacs/comments/6sgwfc/how_do_i_set_a_key_binding_only_for_a_particular/">https://www.reddit.com/r/emacs/comments/6sgwfc/how_do_i_set_a_key_binding_only_for_a_particular/</a><br />
+<div class="outline-text-5" id="text-4-1-1-1">
+<p>
+(with-eval-after-load "org"
+  (define-key org-mode-map (kbd "S-&lt;left&gt;") 'backward-char)
+  (define-key org-mode-map (kbd "S-&lt;right&gt;") 'forward-char)
+  (define-key org-mode-map (kbd "S-&lt;up&gt;") 'previous-line)
+  (define-key org-mode-map (kbd "S-&lt;down&gt;") 'next-line)
+  (define-key org-mode-map (kbd "C-S-c C-, o k") 'ardie-open-kodland)
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga725ac1" class="outline-4">
+<h4 id="orga725ac1"><span class="section-number-4">4.1.2.</span> with-eval-after-load &amp; local-set-key</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org10ba722"></a><a href="https://emacs.stackexchange.com/questions/12293/mode-hooks-and-eval-after-load">https://emacs.stackexchange.com/questions/12293/mode-hooks-and-eval-after-load</a><br />
+<div class="outline-text-5" id="text-4-1-2-1">
+<p>
+(add-hook 'org-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "S-&lt;left&gt;") 'backward-char)
+             (local-set-key (kbd "S-&lt;right&gt;") 'forward-char)
+             (local-set-key (kbd "S-&lt;up&gt;") 'previous-line)
+             (local-set-key (kbd "S-&lt;down&gt;") 'next-line)
+             (local-set-key (kbd "C-S-c C-, o k") 'ardie-open-kodland)))
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge344f76" class="outline-3">
+<h3 id="orge344f76"><span class="section-number-3">4.2.</span> In the long term, once we understand, we should avoid -eval- &amp; hooks (??)</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgecd15ca" class="outline-4">
+<h4 id="orgecd15ca"><span class="section-number-4">4.2.1.</span> <a href="https://www.wisdomandwonder.com/emacs/12783/are-load-hooks-always-a-bad-idea">https://www.wisdomandwonder.com/emacs/12783/are-load-hooks-always-a-bad-idea</a></h4>
+</div>
+</div>
+<div id="outline-container-orgd269c92" class="outline-3">
+<h3 id="orgd269c92"><span class="section-number-3">4.3.</span> Lots of information</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org77137a3" class="outline-4">
+<h4 id="org77137a3"><span class="section-number-4">4.3.1.</span> <a href="https://www.masteringemacs.org/article/mastering-key-bindings-emacs">https://www.masteringemacs.org/article/mastering-key-bindings-emacs</a></h4>
+<div class="outline-text-4" id="text-4-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org74940cd"></a>Interestingly, C-c ? (where ? is any single character), is reserved for user &amp; USERS alone. But most 3rd packages dont give a shit<br />
+<ol class="org-ol">
+<li><a id="org97f2fc3"></a>I actually personally use C-S-c coz I learnt my Emacs by deep diving dangerously, by blindly copying a config from some Indian Emacs developer named Kaushal Modi. Theres a Github link of the most famous configs collected under one repo. <a href="https://github.com/caisah/emacs.dz">right here</a><br /></li>
+</ol>
+</li>
+<li><a id="org5376330"></a>Also, 2 keys that are reserved (remnants from ancient 80's keys), are Hyper &amp; Super. Today, Super is "Windows key" &amp; Hyper is "Application-Context"<br />
+<ol class="org-ol">
+<li><a id="org30c2b7a"></a>These keys are also reserved, might be very useful<br /></li>
+</ol>
+</li>
+<li><a id="org28a2ba0"></a>Also, in "key lookup order", confusingly, Minor Mode comes before Local which also comes befor Global. (I tot Local overrides Global?)<br /></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb74c1de" class="outline-2">
+<h2 id="orgb74c1de"><span class="section-number-2">5.</span> dired file manager</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgde89246" class="outline-3">
+<h3 id="orgde89246"><span class="section-number-3">5.1.</span> <a href="https://www.youtube.com/watch?v=PMWwM8QJAtU">https://www.youtube.com/watch?v=PMWwM8QJAtU</a></h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org887dac4" class="outline-4">
+<h4 id="org887dac4"><span class="section-number-4">5.1.1.</span> System crafters</h4>
+</div>
+<div id="outline-container-orga6a8a3d" class="outline-4">
+<h4 id="orga6a8a3d"><span class="section-number-4">5.1.2.</span> shortcuts</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org9195c21"></a>j - goto file<br /></li>
+<li><a id="org5c49ab4"></a>k - kill marked files, NOT real deletion, only the listing<br /></li>
+<li><a id="orge925db3"></a>g - revert buffer, aka refresh<br /></li>
+<li><a id="org1b02330"></a>v - dired-view-file, allows view without opening the file, quick q exits to previous dired buffer<br /></li>
+<li><a id="orgb41f9c2"></a>C-M-o - dired-display-file<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgce8967a" class="outline-3">
+<h3 id="orgce8967a"><span class="section-number-3">5.2.</span> <a href="https://lucidmanager.org/productivity/using-emacs-image-dired/">https://lucidmanager.org/productivity/using-emacs-image-dired/</a></h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org3de9df5" class="outline-4">
+<h4 id="org3de9df5"><span class="section-number-4">5.2.1.</span> TODO!!!!!</h4>
+</div>
+<div id="outline-container-orgf5a25c0" class="outline-4">
+<h4 id="orgf5a25c0"><span class="section-number-4">5.2.2.</span> Very cool, imagine opening GIMP automaticallly from inside Emacs</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org134cd1f" class="outline-2">
+<h2 id="org134cd1f"><span class="section-number-2">6.</span> folding, hide &amp; other cool tricks</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org5bb48d4" class="outline-3">
+<h3 id="org5bb48d4"><span class="section-number-3">6.1.</span> Should start collecting it here!!</h3>
+</div>
+</div>
+<div id="outline-container-org43d0707" class="outline-2">
+<h2 id="org43d0707"><span class="section-number-2">7.</span> Looks, looks, looks:</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org284faab" class="outline-3">
+<h3 id="org284faab"><span class="section-number-3">7.1.</span> If you want some really great looking suggestion on fonts, from usable examples. Look at this</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orge9aea3e" class="outline-4">
+<h4 id="orge9aea3e"><span class="section-number-4">7.1.1.</span> <a href="https://www.reddit.com/r/emacs/comments/14q399t/hi_out_of_curiosity_what_are_your_favourite_fonts/">https://www.reddit.com/r/emacs/comments/14q399t/hi_out_of_curiosity_what_are_your_favourite_fonts/</a></h4>
+</div>
+<div id="outline-container-org366b8c0" class="outline-4">
+<h4 id="org366b8c0"><span class="section-number-4">7.1.2.</span> Especially the code snippet below</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<p>
+(dolist (buffer (list " <b>Minibuf-0</b>" " <b>Echo Area 0</b>"
+                        " <b>Minibuf-1</b>" " <b>Echo Area 1</b>"))
+    (when (get-buffer buffer)
+      (with-current-buffer buffer
+        (face-remap-add-relative 'bold :weight 'normal)
+        (face-remap-add-relative 'default :weight 'light))))
+</p>
+
+<p>
+(add-hook 'minibuffer-setup-hook
+          '(lambda()
+             (face-remap-add-relative 'bold :weight 'normal)
+             (face-remap-add-relative 'default :weight 'light)))
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f2b461" class="outline-3">
+<h3 id="org5f2b461"><span class="section-number-3">7.2.</span> System Crafters ha a very cool Lisp code using the macro/function (?) called dolist</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-org1ffc6e8" class="outline-4">
+<h4 id="org1ffc6e8"><span class="section-number-4">7.2.1.</span> <a href="https://systemcrafters.net/emacs-tips/presentations-with-org-present/">https://systemcrafters.net/emacs-tips/presentations-with-org-present/</a></h4>
+</div>
+</div>
+<div id="outline-container-org91cafd4" class="outline-3">
+<h3 id="org91cafd4"><span class="section-number-3">7.3.</span> How do you find out font (what Emacs calls faces) information?</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-orga75f34d" class="outline-4">
+<h4 id="orga75f34d"><span class="section-number-4">7.3.1.</span> <a href="https://www.emacswiki.org/emacs/FaceList">https://www.emacswiki.org/emacs/FaceList</a></h4>
+<div class="outline-text-4" id="text-7-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga2eb500"></a>by M-x list-faces-display<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgff90950" class="outline-4">
+<h4 id="orgff90950"><span class="section-number-4">7.3.2.</span> <a href="https://www.emacswiki.org/emacs/Face">https://www.emacswiki.org/emacs/Face</a></h4>
+<div class="outline-text-4" id="text-7-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org85b69c4"></a>You can use  C-u C-x =  to find out which faces are applied to the text at point (under the cursor).<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd28aac2" class="outline-3">
+<h3 id="orgd28aac2"><span class="section-number-3">7.4.</span> You might have to read this one day</h3>
+<div class="outline-text-3" id="text-7-4">
+</div>
+<div id="outline-container-org5231606" class="outline-4">
+<h4 id="org5231606"><span class="section-number-4">7.4.1.</span> <a href="https://zzamboni.org/post/beautifying-org-mode-in-emacs/">https://zzamboni.org/post/beautifying-org-mode-in-emacs/</a></h4>
+</div>
+<div id="outline-container-orgb5006dc" class="outline-4">
+<h4 id="orgb5006dc"><span class="section-number-4">7.4.2.</span> <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Face-Customization.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/Face-Customization.html</a></h4>
+</div>
+<div id="outline-container-orga6d0fe4" class="outline-4">
+<h4 id="orga6d0fe4"><span class="section-number-4">7.4.3.</span> <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Faces.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/Faces.html</a></h4>
+</div>
+<div id="outline-container-org514f546" class="outline-4">
+<h4 id="org514f546"><span class="section-number-4">7.4.4.</span> <a href="https://github.com/abo-abo/swiper/issues/568">https://github.com/abo-abo/swiper/issues/568</a></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba72064" class="outline-2">
+<h2 id="orgba72064"><span class="section-number-2">8.</span> YASsnippets:</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org6843923" class="outline-3">
+<h3 id="org6843923"><span class="section-number-3">8.1.</span> Great beginner example, Im finally learning from this example:</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-org248299d" class="outline-4">
+<h4 id="org248299d"><span class="section-number-4">8.1.1.</span> <a href="https://joaotavora.github.io/yasnippet/snippet-development.html">https://joaotavora.github.io/yasnippet/snippet-development.html</a></h4>
+</div>
+</div>
+<div id="outline-container-org20cc566" class="outline-3">
+<h3 id="org20cc566"><span class="section-number-3">8.2.</span> Great example too:</h3>
+<div class="outline-text-3" id="text-8-2">
+</div>
+<div id="outline-container-orge2359bc" class="outline-4">
+<h4 id="orge2359bc"><span class="section-number-4">8.2.1.</span> <a href="https://joaotavora.github.io/yasnippet/snippet-reference.html">https://joaotavora.github.io/yasnippet/snippet-reference.html</a></h4>
+</div>
+</div>
+<div id="outline-container-orgbd3d412" class="outline-3">
+<h3 id="orgbd3d412"><span class="section-number-3">8.3.</span> I finally know how setup config (dirs etc) properly</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+<div id="outline-container-orgc23e9e1" class="outline-4">
+<h4 id="orgc23e9e1"><span class="section-number-4">8.3.1.</span> <a href="https://joaotavora.github.io/yasnippet/snippet-organization.html">https://joaotavora.github.io/yasnippet/snippet-organization.html</a></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org72ba52f" class="outline-2">
+<h2 id="org72ba52f"><span class="section-number-2">9.</span> org templates:</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org419f53a" class="outline-3">
+<h3 id="org419f53a"><span class="section-number-3">9.1.</span> Finally once you start inserting your first code block (template, whatever). We can read this</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-org25008be" class="outline-4">
+<h4 id="org25008be"><span class="section-number-4">9.1.1.</span> <a href="https://www.nicholasvanhorn.com/posts/org-structure-completion.html">https://www.nicholasvanhorn.com/posts/org-structure-completion.html</a></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdfc71ef" class="outline-2">
+<h2 id="orgdfc71ef"><span class="section-number-2">10.</span> Something I have never used in Emacs, but usually in terminal, replace text/patterns in multiple files:</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-orgfee2921" class="outline-3">
+<h3 id="orgfee2921"><span class="section-number-3">10.1.</span> <a href="https://stackoverflow.com/questions/270930/using-emacs-to-recursively-find-and-replace-in-text-files-not-already-open">https://stackoverflow.com/questions/270930/using-emacs-to-recursively-find-and-replace-in-text-files-not-already-open</a></h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-orgabedda7" class="outline-4">
+<h4 id="orgabedda7"><span class="section-number-4">10.1.1.</span> Need as input: &#x2013;&gt; filename pattern &amp; regex text</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org45e7e43" class="outline-2">
+<h2 id="org45e7e43"><span class="section-number-2">11.</span> Very IMPORTANT, saved all my loading problems!!:</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-org1268d83" class="outline-3">
+<h3 id="org1268d83"><span class="section-number-3">11.1.</span> <a href="https://github.com/jwiegley/use-package/issues/494">https://github.com/jwiegley/use-package/issues/494</a></h3>
+<div class="outline-text-3" id="text-11-1">
+</div>
+<div id="outline-container-orgc966ef8" class="outline-4">
+<h4 id="orgc966ef8"><span class="section-number-4">11.1.1.</span> Personally, I just removed "package-refresh-contents" from setup-packages.el</h4>
+</div>
+</div>
+<div id="outline-container-orgb559850" class="outline-3">
+<h3 id="orgb559850"><span class="section-number-3">11.2.</span> Additional read too</h3>
+<div class="outline-text-3" id="text-11-2">
+</div>
+<div id="outline-container-org96d9cd4" class="outline-4">
+<h4 id="org96d9cd4"><span class="section-number-4">11.2.1.</span> <a href="https://ianyepan.github.io/posts/setting-up-use-package/">https://ianyepan.github.io/posts/setting-up-use-package/</a></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org1afc2a8" class="outline-2">
+<h2 id="org1afc2a8"><span class="section-number-2">12.</span> An apparently, very cool init.el, according to one good emacs user. Must read it 1 day</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-orgc7ae5c8" class="outline-3">
+<h3 id="orgc7ae5c8"><span class="section-number-3">12.1.</span> <a href="https://github.com/eastwood/config/blob/master/emacs.d/init.el">https://github.com/eastwood/config/blob/master/emacs.d/init.el</a></h3>
+</div>
+</div>
+<div id="outline-container-org848ff07" class="outline-2">
+<h2 id="org848ff07"><span class="section-number-2">13.</span> Very Cool. But important to not over-rely. Auto-saving for Emacs, by exploiting "out-of-focus"</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-orga26e1dd" class="outline-3">
+<h3 id="orga26e1dd"><span class="section-number-3">13.1.</span> <a href="https://www.emacswiki.org/emacs/AutoSave">https://www.emacswiki.org/emacs/AutoSave</a></h3>
+<div class="outline-text-3" id="text-13-1">
+</div>
+<div id="outline-container-org6f7bc16" class="outline-4">
+<h4 id="org6f7bc16"><span class="section-number-4">13.1.1.</span> 'focus-out-hook'</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org29bd363" class="outline-2">
+<h2 id="org29bd363"><span class="section-number-2">14.</span> Cool for development, you might want to include this in an init file. Maybe as a separate development-init.el</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+<div id="outline-container-orgf1a44ee" class="outline-3">
+<h3 id="orgf1a44ee"><span class="section-number-3">14.1.</span> <a href="https://emacs.stackexchange.com/questions/169/how-do-i-reload-a-file-in-a-buffer/171#171">https://emacs.stackexchange.com/questions/169/how-do-i-reload-a-file-in-a-buffer/171#171</a></h3>
+</div>
+</div>
+<div id="outline-container-org94ae75c" class="outline-2">
+<h2 id="org94ae75c"><span class="section-number-2">15.</span> <a href="https://guix.gnu.org/manual/en/html_node/Application-Setup.html">GUIX magically works along with my spacemacs, how?</a></h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-org70b67ca" class="outline-3">
+<h3 id="org70b67ca"><span class="section-number-3">15.1.</span> Something about locales GUIX<sub>LOCPATH</sub>, will never allow foreign-distro programs to load GUIX stuff,</h3>
+<div class="outline-text-3" id="text-15-1">
+</div>
+<div id="outline-container-orgfd80eeb" class="outline-4">
+<h4 id="orgfd80eeb"><span class="section-number-4">15.1.1.</span> -&gt; while ensuring GUIX only loads everything foreign  and local.</h4>
+</div>
+<div id="outline-container-org89d178c" class="outline-4">
+<h4 id="org89d178c"><span class="section-number-4">15.1.2.</span> this "foreign-distro" programs cant see GUIX<sub>LOCPATH</sub></h4>
+</div>
+</div>
+<div id="outline-container-org3bd3dc7" class="outline-3">
+<h3 id="org3bd3dc7"><span class="section-number-3">15.2.</span> If thats the case, we can install Tramp by:</h3>
+<div class="outline-text-3" id="text-15-2">
+</div>
+<div id="outline-container-org5180f5c" class="outline-4">
+<h4 id="org5180f5c"><span class="section-number-4">15.2.1.</span> unset the GUIX<sub>LOCPATH</sub> variable</h4>
+</div>
+<div id="outline-container-org52d8693" class="outline-4">
+<h4 id="org52d8693"><span class="section-number-4">15.2.2.</span> reload original spacemacs safely</h4>
+</div>
+<div id="outline-container-org2dfa0fe" class="outline-4">
+<h4 id="org2dfa0fe"><span class="section-number-4">15.2.3.</span> and try to install Tramp and load Google drive from there</h4>
+</div>
+</div>
+<div id="outline-container-orgce483a6" class="outline-3">
+<h3 id="orgce483a6"><span class="section-number-3">15.3.</span> If that doesnt work then, its safe to</h3>
+<div class="outline-text-3" id="text-15-3">
+</div>
+<div id="outline-container-orgcb0931f" class="outline-4">
+<h4 id="orgcb0931f"><span class="section-number-4">15.3.1.</span> reset everything back to GUIX spacemacs, and</h4>
+</div>
+<div id="outline-container-org7bf08a0" class="outline-4">
+<h4 id="org7bf08a0"><span class="section-number-4">15.3.2.</span> install TRAMP from there</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org2ec9e0e" class="outline-2">
+<h2 id="org2ec9e0e"><span class="section-number-2">16.</span> Basics, education:</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+<div id="outline-container-org395fdeb" class="outline-3">
+<h3 id="org395fdeb"><span class="section-number-3">16.1.</span> Interesting, lead from other examples:</h3>
+<div class="outline-text-3" id="text-16-1">
+</div>
+<div id="outline-container-org7e8106f" class="outline-4">
+<h4 id="org7e8106f"><span class="section-number-4">16.1.1.</span> <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/Advising-Functions.html</a></h4>
+<div class="outline-text-4" id="text-16-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org13fc6e3"></a>advising Lisp functions<br />
+<ol class="org-ol">
+<li><a id="org8e35921"></a>advice-add , advice-remove , but no defadvice , like we saw from another Tut<br /></li>
+</ol>
+</li>
+<li><a id="org4c86fcc"></a>PRACTICE: using filter-return<br />
+<div class="outline-text-5" id="text-16-1-1-2">
+<div class="org-src-container">
+<pre class="src src-lisp"><span style="color: #7f0000;">;; </span><span style="color: #7f0000;">cool discovery, a way to hide non-used argument, now we pass willy-nilly</span>
+(<span style="color: #531ab6;">defun</span> <span style="color: #721045;">x-double</span> (x <span style="color: #005f5f;">&amp;rest</span> _what)
+  (print
+   (* x 2))
+  (print _what)
+  )
+
+(<span style="color: #531ab6;">defun</span> <span style="color: #721045;">say-hello</span> (x)
+  <span style="color: #7f0000;">;; </span><span style="color: #7f0000;">(print x)</span>
+  (message <span style="color: #3548cf;">"hello there"</span>)
+  (+ x 1)
+  <span style="color: #7f0000;">;;</span>
+  )
+
+(advice-add 'say-hello <span style="color: #8f0075;">:filter-return</span> #'x-double)
+
+(x-double 5)
+(say-hello 5)
+</pre>
+</div>
+</div>
+</li>
+
+
+
+<li><a id="org414bc27"></a>PRACTICE: using filter-args<br />
+<div class="outline-text-5" id="text-16-1-1-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #7f0000;">;; </span><span style="color: #7f0000;">for some odd reason, adding more&gt;1 argument produces errors, becoz filter-args focuses on arguments between A &amp; B, we should forget what we feed to B (B is called first)</span>
+
+(<span style="color: #531ab6;">defun</span> <span style="color: #721045;">x-list</span> (first)
+  (mapcar '1+ '(2 4 6))
+  )
+
+(<span style="color: #531ab6;">defun</span> <span style="color: #721045;">say-hello</span> (first second third)
+  (print first)
+  )
+
+(advice-add  'say-hello <span style="color: #8f0075;">:filter-args</span> #'x-list)
+
+<span style="color: #7f0000;">;; </span><span style="color: #7f0000;">Also, dont understand exactly. Why does the number of arguments have no effect here?</span>
+(say-hello 5 6 7)
+</pre>
+</div>
+</div>
+</li>
+
+
+
+
+
+
+
+
+
+<li><a id="org8ce9a63"></a>Dont forget to unset between practices to remove pairings function.<br />
+<div class="outline-text-5" id="text-16-1-1-4">
+<p>
+(advice-remove 'say-hello  'x-list)
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org4d45c45" class="outline-3">
+<h3 id="org4d45c45"><span class="section-number-3">16.2.</span> Lisp</h3>
+<div class="outline-text-3" id="text-16-2">
+</div>
+<div id="outline-container-org2e29a74" class="outline-4">
+<h4 id="org2e29a74"><span class="section-number-4">16.2.1.</span> One of the best basic intro into eLisp:</h4>
+<div class="outline-text-4" id="text-16-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org4400c7a"></a><a href="https://cs.gmu.edu/~sean/lisp/LispTutorial.html">https://cs.gmu.edu/~sean/lisp/LispTutorial.html</a><br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7cf807d" class="outline-3">
+<h3 id="org7cf807d"><span class="section-number-3">16.3.</span> elisp - my enlightenment</h3>
+<div class="outline-text-3" id="text-16-3">
+</div>
+<div id="outline-container-org75895bc" class="outline-4">
+<h4 id="org75895bc"><span class="section-number-4">16.3.1.</span> <a href="https://emacs.stackexchange.com/questions/80/how-can-i-quickly-toggle-between-a-file-and-a-scratch-buffer-having-the-same-m">https://emacs.stackexchange.com/questions/80/how-can-i-quickly-toggle-between-a-file-and-a-scratch-buffer-having-the-same-m</a></h4>
+</div>
+</div>
+<div id="outline-container-orga192719" class="outline-3">
+<h3 id="orga192719"><span class="section-number-3">16.4.</span> Errors:</h3>
+<div class="outline-text-3" id="text-16-4">
+</div>
+<div id="outline-container-orgd4f1ce5" class="outline-4">
+<h4 id="orgd4f1ce5"><span class="section-number-4">16.4.1.</span> <a href="https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58">https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58</a></h4>
+<div class="outline-text-4" id="text-16-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org25af774"></a>A bit useful, should read one day.<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7ff0d55" class="outline-3">
+<h3 id="org7ff0d55"><span class="section-number-3">16.5.</span> Datatypes, converting strings, etc..</h3>
+<div class="outline-text-3" id="text-16-5">
+</div>
+<div id="outline-container-orgdf4ba5d" class="outline-4">
+<h4 id="orgdf4ba5d"><span class="section-number-4">16.5.1.</span> <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/String-Conversion.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/String-Conversion.html</a></h4>
+</div>
+<div id="outline-container-orgf8645cd" class="outline-4">
+<h4 id="orgf8645cd"><span class="section-number-4">16.5.2.</span> <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Text-Comparison.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/Text-Comparison.html</a></h4>
+</div>
+<div id="outline-container-org0044c2e" class="outline-4">
+<h4 id="org0044c2e"><span class="section-number-4">16.5.3.</span> maybe a good website</h4>
+<div class="outline-text-4" id="text-16-5-3">
+</div>
+<ol class="org-ol">
+<li><a id="orga04c77f"></a><a href="https://www.math.utah.edu/docs/info/emacs-lisp-intro_8.html#SEC92">https://www.math.utah.edu/docs/info/emacs-lisp-intro_8.html#SEC92</a><br /></li>
+</ol>
+</div>
+<div id="outline-container-org910ccc3" class="outline-4">
+<h4 id="org910ccc3"><span class="section-number-4">16.5.4.</span> So many cool things to try, like nyanmode, cute cat that browses with you.</h4>
+<div class="outline-text-4" id="text-16-5-4">
+</div>
+<ol class="org-ol">
+<li><a id="org8112c7a"></a><a href="https://www.emacswiki.org/emacs/ModeLineConfiguration">https://www.emacswiki.org/emacs/ModeLineConfiguration</a><br /></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org3226a9a" class="outline-2">
+<h2 id="org3226a9a"><span class="section-number-2">17.</span> Personal issues:</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-orgfbc2938" class="outline-3">
+<h3 id="orgfbc2938"><span class="section-number-3">17.1.</span> Multi cursors trouble</h3>
+<div class="outline-text-3" id="text-17-1">
+</div>
+<div id="outline-container-orge706793" class="outline-4">
+<h4 id="orge706793"><span class="section-number-4">17.1.1.</span> Sometimes multiple-cursors dont work in certain modes. I switch to a different mode (Eg: Python) and it works</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org39b3815" class="outline-2">
+<h2 id="org39b3815"><span class="section-number-2">18.</span> Wishlist</h2>
+<div class="outline-text-2" id="text-18">
+</div>
+<div id="outline-container-orgfa9ef0a" class="outline-3">
+<h3 id="orgfa9ef0a"><span class="section-number-3">18.1.</span> <a href="https://github.com/oantolin/embark">https://github.com/oantolin/embark</a></h3>
+<div class="outline-text-3" id="text-18-1">
+</div>
+<div id="outline-container-orgb8e97e9" class="outline-4">
+<h4 id="orgb8e97e9"><span class="section-number-4">18.1.1.</span> Embark makes it easy to run commands depending on where your point (cursor?) is</h4>
+</div>
+<div id="outline-container-orgf2a7199" class="outline-4">
+<h4 id="orgf2a7199"><span class="section-number-4">18.1.2.</span> Embark is like a keyboard based version of right-click contextual menu (pop-up)</h4>
+</div>
+<div id="outline-container-orgbca74b3" class="outline-4">
+<h4 id="orgbca74b3"><span class="section-number-4">18.1.3.</span> Examples:</h4>
+<div class="outline-text-4" id="text-18-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgacc46fd"></a>For files you can delete, copy, rename<br /></li>
+<li><a id="orgcbabed0"></a>For buffers, you can kill or switch<br /></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcaae0fd" class="outline-2">
+<h2 id="orgcaae0fd"><span class="section-number-2">19.</span> How do we export to PDFs:</h2>
+<div class="outline-text-2" id="text-19">
+<div class="org-src-container">
+<pre class="src src-sh">
+sudo apt update
+sudo apt install texlive-latex-extra
+<span style="color: #7f0000;"># </span><span style="color: #7f0000;">===== (all following errors indicated by the buffer *Org PDF Latex Output*)</span>
+<span style="color: #7f0000;"># </span><span style="color: #7f0000;">===== apparently org export uses xelatex, which is a replacement for pdflatex</span>
+sudo apt install texlive-xetex
+<span style="color: #7f0000;"># </span><span style="color: #7f0000;">===== another error, this minted needs to use python-pygments</span>
+sudo apt install python-pygments
+
+<span style="color: #7f0000;"># </span><span style="color: #7f0000;">==================== HOLY SHIT!! It works</span>
+</pre>
+</div>
+</div>
+<div id="outline-container-org64bc188" class="outline-3">
+<h3 id="org64bc188"><span class="section-number-3">19.1.</span> The links we below tried reading below, but in the end the previous instructions simply worked</h3>
+<div class="outline-text-3" id="text-19-1">
+</div>
+<div id="outline-container-org1793a24" class="outline-4">
+<h4 id="org1793a24"><span class="section-number-4">19.1.1.</span> <a href="https://www.geneatcg.com/emacs-org-mode-export-to-pdf/">https://www.geneatcg.com/emacs-org-mode-export-to-pdf/</a></h4>
+<div class="outline-text-4" id="text-19-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgd54fbd7"></a>No installation instructions<br /></li>
+<li><a id="org64294cd"></a>Has a starter code, to put inside init.el. (LOTS of add-to-list to org-latex-classes &amp; org-latex-pdf-process)<br /></li>
+<li><a id="org9324676"></a>From this site, you DONT NEED to learn latex syntax, the starter code does that<br /></li>
+<li><a id="orgc46ed01"></a>Simple use code, and export<br /></li>
+</ol>
+</div>
+<div id="outline-container-org16f3b5c" class="outline-4">
+<h4 id="org16f3b5c"><span class="section-number-4">19.1.2.</span> <a href="https://medium.com/@sachinsamurai/setting-up-latex-on-doom-emacs-for-beginners-824358463a42">https://medium.com/@sachinsamurai/setting-up-latex-on-doom-emacs-for-beginners-824358463a42</a></h4>
+<div class="outline-text-4" id="text-19-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org142d50b"></a>This one assumes you want to learn Latex, oops<br /></li>
+<li><a id="org377b4a3"></a>Though it points to another site where you install proper Latex<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgc6d1210" class="outline-4">
+<h4 id="orgc6d1210"><span class="section-number-4">19.1.3.</span> <a href="https://www.tug.org/texlive/">https://www.tug.org/texlive/</a></h4>
+<div class="outline-text-4" id="text-19-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org2955da9"></a>exporting pDf through latex, can produce LOTS of errors. If all fails, always better to install the FULL latex, and from the original TUG source. (7GB!!)<br /></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org224924e" class="outline-2">
+<h2 id="org224924e"><span class="section-number-2">20.</span> Possible projects</h2>
+<div class="outline-text-2" id="text-20">
+</div>
+<div id="outline-container-org6f98850" class="outline-3">
+<h3 id="org6f98850"><span class="section-number-3">20.1.</span> I want to have a buffer on the right side that automatically updates, whenever I change some source file (.org file maybe) on the left side</h3>
+</div>
+<div id="outline-container-org76804fb" class="outline-3">
+<h3 id="org76804fb"><span class="section-number-3">20.2.</span> Might be useful to familiarize with these functions, has lots of em, and very simple explanation</h3>
+<div class="outline-text-3" id="text-20-2">
+</div>
+<div id="outline-container-orgdaccc49" class="outline-4">
+<h4 id="orgdaccc49"><span class="section-number-4">20.2.1.</span> <a href="http://xahlee.info/emacs/emacs/elisp_buffer_file_functions.html">http://xahlee.info/emacs/emacs/elisp_buffer_file_functions.html</a></h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org3beea75" class="outline-2">
+<h2 id="org3beea75"><span class="section-number-2">21.</span> modifications that are fancy/fun, but not important</h2>
+<div class="outline-text-2" id="text-21">
+</div>
+<div id="outline-container-org83d9b56" class="outline-3">
+<h3 id="org83d9b56"><span class="section-number-3">21.1.</span> Configuring the modeline</h3>
+<div class="outline-text-3" id="text-21-1">
+</div>
+<div id="outline-container-orga39655e" class="outline-4">
+<h4 id="orga39655e"><span class="section-number-4">21.1.1.</span> Important variables, actually some are confusing. And it was easier for me to just edit Emacs modeline with simple functions, like combining (cond ..) &amp; (major-mode)</h4>
+<div class="outline-text-4" id="text-21-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga6ec82b"></a><a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Variables.html">https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Variables.html</a><br /></li>
+</ol>
+</div>
+<div id="outline-container-org67beb03" class="outline-4">
+<h4 id="org67beb03"><span class="section-number-4">21.1.2.</span> I used emojis from here</h4>
+<div class="outline-text-4" id="text-21-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org8540440"></a><a href="https://unicode.org/emoji/charts/full-emoji-list.html">https://unicode.org/emoji/charts/full-emoji-list.html</a><br /></li>
+</ol>
+</div>
+<div id="outline-container-org8b8fa96" class="outline-4">
+<h4 id="org8b8fa96"><span class="section-number-4">21.1.3.</span> I dont know what this is for</h4>
+<div class="outline-text-4" id="text-21-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org108aa42"></a><a href="https://www.emacswiki.org/emacs/modeline-region.el">https://www.emacswiki.org/emacs/modeline-region.el</a><br /></li>
+</ol>
+</div>
+<div id="outline-container-org8f14304" class="outline-4">
+<h4 id="org8f14304"><span class="section-number-4">21.1.4.</span> If you were testing modeline in a buffer, the command force-mode-line-update might be useful</h4>
+<div class="outline-text-4" id="text-21-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgfced17d"></a><a href="https://www.reddit.com/r/emacs/comments/euox3d/is_there_a_way_to_refreshupdate_the_modeline/">https://www.reddit.com/r/emacs/comments/euox3d/is_there_a_way_to_refreshupdate_the_modeline/</a><br /></li>
+</ol>
+</div>
+<div id="outline-container-orgab8999b" class="outline-4">
+<h4 id="orgab8999b"><span class="section-number-4">21.1.5.</span> Config examples:</h4>
+<div class="outline-text-4" id="text-21-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="org4f2ba81"></a><a href="https://github.com/rougier/emacs-octicons">https://github.com/rougier/emacs-octicons</a><br /></li>
+<li><a id="org98107f6"></a><a href="https://www.gnu.org/software/emacs/manual/html_node/eintr/Mode-Line.html">https://www.gnu.org/software/emacs/manual/html_node/eintr/Mode-Line.html</a><br />
+<ol class="org-ol">
+<li><a id="orgafed252"></a>I based my entire config on this one<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgbd8a6e4" class="outline-4">
+<h4 id="orgbd8a6e4"><span class="section-number-4">21.1.6.</span> <a href="https://emacsdocs.org/docs/elisp/Emulating-Mode-Line">https://emacsdocs.org/docs/elisp/Emulating-Mode-Line</a></h4>
+<div class="outline-text-4" id="text-21-1-6">
+</div>
+<ol class="org-ol">
+<li><a id="org7ba1b94"></a>Should probably check this site<br /></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org2790613" class="outline-2">
+<h2 id="org2790613"><span class="section-number-2">22.</span> More cool stuff to re-arrange!!</h2>
+<div class="outline-text-2" id="text-22">
+</div>
+<div id="outline-container-org9d25617" class="outline-3">
+<h3 id="org9d25617"><span class="section-number-3">22.1.</span> <a href="https://masteringemacs.com/article/diacritics-in-emacs">https://masteringemacs.com/article/diacritics-in-emacs</a></h3>
+</div>
+<div id="outline-container-orgaa554bf" class="outline-3">
+<h3 id="orgaa554bf"><span class="section-number-3">22.2.</span> Email</h3>
+<div class="outline-text-3" id="text-22-2">
+</div>
+<div id="outline-container-orgb9d0de0" class="outline-4">
+<h4 id="orgb9d0de0"><span class="section-number-4">22.2.1.</span> <a href="https://shom.dev/posts/20220108_setting-up-protonmail-in-emacs/">https://shom.dev/posts/20220108_setting-up-protonmail-in-emacs/</a></h4>
+<div class="outline-text-4" id="text-22-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3effd18"></a>Unlike systemcrafters (ubuntu I guess), guix version of mu includes mu4e<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb2d9b32" class="outline-3">
+<h3 id="orgb2d9b32"><span class="section-number-3">22.3.</span> Hydra, MUST read this and write properly later</h3>
+<div class="outline-text-3" id="text-22-3">
+</div>
+<div id="outline-container-orgf1ae6e3" class="outline-4">
+<h4 id="orgf1ae6e3"><span class="section-number-4">22.3.1.</span> <a href="https://elpa.gnu.org/packages/hydra.html">https://elpa.gnu.org/packages/hydra.html</a></h4>
+</div>
+<div id="outline-container-orgb4c6dc7" class="outline-4">
+<h4 id="orgb4c6dc7"><span class="section-number-4">22.3.2.</span> <a href="https://github.com/abo-abo/hydra">https://github.com/abo-abo/hydra</a></h4>
+</div>
+<div id="outline-container-orgd3b9872" class="outline-4">
+<h4 id="orgd3b9872"><span class="section-number-4">22.3.3.</span> <a href="https://www.reddit.com/r/emacs/comments/8of6tx/tip_how_to_be_a_beast_with_hydra/">https://www.reddit.com/r/emacs/comments/8of6tx/tip_how_to_be_a_beast_with_hydra/</a></h4>
+</div>
+</div>
+<div id="outline-container-org00d3df9" class="outline-3">
+<h3 id="org00d3df9"><span class="section-number-3">22.4.</span> <a href="http://xahlee.info/emacs/emacs/emacs_auto_save.html">http://xahlee.info/emacs/emacs/emacs_auto_save.html</a></h3>
+<div class="outline-text-3" id="text-22-4">
+</div>
+<div id="outline-container-org458c5bf" class="outline-4">
+<h4 id="org458c5bf"><span class="section-number-4">22.4.1.</span> an argument against making save an automatic feature. And an argument for saving whenever you switch out of Emacs (that is switching to other apps, like a browser, or switching workspace). Ive had this on, for a long time. But now reading argument for it, what a relief. For some time, I was thinking whether Emacs not having an auto-save every second (like other IDE's) a benefit or annoyance. Now I guess, my practice has always made sense (Besides, when we are developing/writing, we mostly need saving when we do something else, browswing a word/article, so attaching it to 'focus-out-hook makes complete sense)</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgec8e1c7" class="outline-2">
+<h2 id="orgec8e1c7"><span class="section-number-2">23.</span> From Redplanet (rearrange later):</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+<div id="outline-container-org25b17b6" class="outline-3">
+<h3 id="org25b17b6"><span class="section-number-3">23.1.</span> <a href="https://lists.gnu.org/archive/html/help-gnu-emacs/2003-04/msg00767.html">https://lists.gnu.org/archive/html/help-gnu-emacs/2003-04/msg00767.html</a></h3>
+<div class="outline-text-3" id="text-23-1">
+</div>
+<div id="outline-container-org3ee6f95" class="outline-4">
+<h4 id="org3ee6f95"><span class="section-number-4">23.1.1.</span> This code adds directories and its sub-directories to load-path. The reason why we dont do this is probably becoz load-path can get excessively long, and Emacs users might want to selectively disable some features.</h4>
+<div class="outline-text-4" id="text-23-1-1">
+<div class="org-src-container">
+<pre class="src src-lisp">
+(<span style="color: #531ab6;">let*</span> ((dir (expand-file-name <span style="color: #3548cf;">"~/emacs"</span>))
+       (default-directory dir))
+  (<span style="color: #531ab6;">when</span> (file-directory-p dir)
+    (add-to-list 'load-path dir)
+    (<span style="color: #531ab6;">if</span> (fboundp 'normal-top-level-add-subdirs-to-load-path)
+        (normal-top-level-add-subdirs-to-load-path))))
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org302c445" class="outline-2">
+<h2 id="org302c445"><span class="section-number-2">24.</span> Rearrange:</h2>
+<div class="outline-text-2" id="text-24">
+</div>
+<div id="outline-container-org91fa769" class="outline-3">
+<h3 id="org91fa769"><span class="section-number-3">24.1.</span> Learning common lisp and eLisp, eLisp doesnt have the stream function, they have insert-file-contents</h3>
+<div class="outline-text-3" id="text-24-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">
+(<span style="color: #531ab6;">defun</span> <span style="color: #721045;">ardie-temp</span> ()
+  (<span style="color: #531ab6;">interactive</span>)
+  (insert-file-contents <span style="color: #3548cf;">"~/my-trash/delete/input.txt"</span> <span style="color: #3548cf;">"what"</span>)
+  )
+
+(global-set-key (kbd <span style="color: #3548cf;">"C-S-z"</span>) 'ardie-temp)
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga35cbdc" class="outline-3">
+<h3 id="orga35cbdc"><span class="section-number-3">24.2.</span> The reason why Emacs uses an alist</h3>
+<div class="outline-text-3" id="text-24-2">
+</div>
+<div id="outline-container-org87182f4" class="outline-4">
+<h4 id="org87182f4"><span class="section-number-4">24.2.1.</span> <a href="https://emacs.stackexchange.com/questions/3397/how-to-replace-an-element-of-an-alist">https://emacs.stackexchange.com/questions/3397/how-to-replace-an-element-of-an-alist</a></h4>
+</div>
+</div>
+<div id="outline-container-org543e0f1" class="outline-3">
+<h3 id="org543e0f1"><span class="section-number-3">24.3.</span> This one is DEFINITELY relevant to our GIS system</h3>
+<div class="outline-text-3" id="text-24-3">
+</div>
+<div id="outline-container-orgf2dceba" class="outline-4">
+<h4 id="orgf2dceba"><span class="section-number-4">24.3.1.</span> <a href="https://groups.io/g/sw-gis/topic/install_emacs_for_smallworld/75042662?p">https://groups.io/g/sw-gis/topic/install_emacs_for_smallworld/75042662?p</a>=</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfe8b913" class="outline-2">
+<h2 id="orgfe8b913"><span class="section-number-2">25.</span> We may need to read and rearrange in a separate file called EmacsWindows.org:</h2>
+<div class="outline-text-2" id="text-25">
+</div>
+<div id="outline-container-orgf15e5f3" class="outline-3">
+<h3 id="orgf15e5f3"><span class="section-number-3">25.1.</span> <a href="https://www.emacswiki.org/emacs/CategoryWThirtyTwo">https://www.emacswiki.org/emacs/CategoryWThirtyTwo</a></h3>
+</div>
+<div id="outline-container-org59d8cb2" class="outline-3">
+<h3 id="org59d8cb2"><span class="section-number-3">25.2.</span> There are many ports of GNU tools available</h3>
+<div class="outline-text-3" id="text-25-2">
+</div>
+<div id="outline-container-org4fedefb" class="outline-4">
+<h4 id="org4fedefb"><span class="section-number-4">25.2.1.</span> <a href="https://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Other-useful-ports.html">https://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Other-useful-ports.html</a></h4>
+</div>
+</div>
+<div id="outline-container-org466257a" class="outline-3">
+<h3 id="org466257a"><span class="section-number-3">25.3.</span> But we're interested only in one. Cygwin. Apparently, its also the most popular</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ardie</p>
+<p class="date">Created: 2023-07-20 Thu 22:31</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
